@@ -1,0 +1,6 @@
+Pods
+.DS_Store
+Version.m
+xcuserdata
+Podfile.lock
+*.xccheckout
