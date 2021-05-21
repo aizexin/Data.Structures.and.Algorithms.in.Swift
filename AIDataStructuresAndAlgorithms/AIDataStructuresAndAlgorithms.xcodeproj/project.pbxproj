@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		45D635012656982A00D0C533 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D635002656982A00D0C533 /* main.swift */; };
 		45D635082656988B00D0C533 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D635072656988B00D0C533 /* Stack.swift */; };
+		45D6350A2657538600D0C533 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D635092657538600D0C533 /* LinkedList.swift */; };
+		45D6350C2657576600D0C533 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D6350B2657576600D0C533 /* Example.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,8 @@
 		45D634FD2656982A00D0C533 /* AIDataStructuresAndAlgorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AIDataStructuresAndAlgorithms; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D635002656982A00D0C533 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		45D635072656988B00D0C533 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		45D635092657538600D0C533 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		45D6350B2657576600D0C533 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 			children = (
 				45D635002656982A00D0C533 /* main.swift */,
 				45D635072656988B00D0C533 /* Stack.swift */,
+				45D6350B2657576600D0C533 /* Example.swift */,
+				45D635092657538600D0C533 /* LinkedList.swift */,
 			);
 			path = AIDataStructuresAndAlgorithms;
 			sourceTree = "<group>";
@@ -122,6 +128,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45D6350C2657576600D0C533 /* Example.swift in Sources */,
+				45D6350A2657538600D0C533 /* LinkedList.swift in Sources */,
 				45D635082656988B00D0C533 /* Stack.swift in Sources */,
 				45D635012656982A00D0C533 /* main.swift in Sources */,
 			);
