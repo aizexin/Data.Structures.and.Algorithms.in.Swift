@@ -38,3 +38,9 @@ example(of: "initializing a stack from an array literal") {
   print(stack)
   stack.pop()
 }
+example(of: "括号匹配") {
+    print(checkParetheses("xxx)("))
+}
+example(of: "反转数组") {
+    printInReverse(["A", "B", "C", "D"])
+}
