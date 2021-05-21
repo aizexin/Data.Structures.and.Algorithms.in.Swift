@@ -41,10 +41,10 @@ class Example {
           stack.pop()
         }
         example(of: "括号匹配") {
-            print(checkParetheses("xxx)("))
+            print(Stack<Int>.checkParetheses("xxx)("))
         }
         example(of: "反转数组") {
-            printInReverse(["A", "B", "C", "D"])
+            Stack<Int>.printInReverse(["A", "B", "C", "D"])
         }
     }
     //MARK: LinkedList
@@ -164,6 +164,52 @@ class Example {
                 list2.remove(after: node)
             }
             print("List2: \(list2)")
+        }
+    }
+    static func linkedListChallengesExample() {
+        example(of: "printInReverse") {
+            LinkedList<String>.printInReverse(["A", "B", "C", "D"])
+        }
+        example(of: "findMiddleNode") {
+            var list = LinkedList<Int>()
+            for i in 1...4 {
+                list.append(i)
+            }
+            print("List: \(list)")
+            print("middleNode: \(String(describing: list.findMiddleNode()?.value))")
+        }
+        example(of: "reverse a linked list") {
+            var list = LinkedList<Int>()
+            for i in 1...4 {
+                list.append(i)
+            }
+            print("List: \(list)")
+            print("After reverse List: \(list.reverse())")
+        }
+        example(of: "merging two list") {
+            var list = LinkedList<Int>()
+            list.push(3)
+            list.push(2)
+            list.push(1)
+            var anotherList = LinkedList<Int>()
+            anotherList.push(-1)
+            anotherList.push(-2)
+            anotherList.push(-3)
+            print("First list: \(list)")
+            print("Second list: \(anotherList)")
+            let mergedList = LinkedList<Int>.mergeTwoList(listA: list, listB: anotherList)
+            print("Merged list: \(mergedList)")
+            
+        }
+        example(of: "Challenge 5: Remove all occurrences of a specific element") {
+            var list = LinkedList<Int>()
+            list.push(3)
+            list.push(2)
+            list.push(2)
+            list.push(1)
+            list.push(1)
+            list.removeAll(3)            
+            print("before list: \(list)")
         }
     }
 }

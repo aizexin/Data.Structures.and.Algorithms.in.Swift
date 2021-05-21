@@ -9,5 +9,6 @@ import Foundation
 
 //Example.performStackExample()
 
-Example.performLinkedListExample()
+//Example.performLinkedListExample()
+Example.linkedListChallengesExample()
 

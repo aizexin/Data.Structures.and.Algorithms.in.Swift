@@ -8,7 +8,7 @@
 import Foundation
 
 //MARK: Node
-public class Node<Value> {
+public class Node<Value: Comparable> {
     public var value :Value
     public var next :Node?
     init(value: Value, next: Node? = nil) {
@@ -27,7 +27,7 @@ extension Node: CustomStringConvertible {
 }
 
 //MARK: LinkedList
-public struct LinkedList<Value> {
+public struct LinkedList<Value :Comparable> {
     public var head: Node<Value>?
     public var tail: Node<Value>?
     
@@ -204,5 +204,97 @@ extension LinkedList: Collection {
             return nodes.contains{ $0 === rhs.node}
         }
         public var node: Node<Value>?
+    }
+}
+
+//MARK: Challenges
+extension LinkedList {
+    static func printInReverse<T: Comparable>(_ array: [T]) {
+        var list = LinkedList<T>()
+        for item in array {
+            list.push(item)
+        }
+        print(list)
+    }
+    func findMiddleNode() -> Node<Value>? {
+        var nodeCount = 0
+        guard head != nil else {
+            return nil
+        }
+        var currentNode = head
+        while let next = currentNode?.next {
+            nodeCount += 1
+            currentNode = next
+        }
+        return self.node(at: nodeCount/2)
+    }
+//    func reverse() -> LinkedList<Value> {
+//        var list = LinkedList<Value>()
+//        var currentNode = head
+//        while let next = currentNode?.next {
+//            list.push(currentNode!.value)
+//            currentNode = next
+//        }
+//        list.push(currentNode!.value)
+//        return list
+//    }
+    mutating func reverse() -> LinkedList<Value> {
+        var currentNode = head
+        var lastNode :Node<Value>? = nil
+        while let next = currentNode?.next {
+            currentNode?.next = lastNode
+            lastNode = currentNode
+            currentNode = next
+        }
+        currentNode?.next = lastNode
+        self.head = currentNode
+        return self
+    }
+    /// 升序合并
+    /// - Parameters:
+    ///   - listA: 1 -> 4 -> 10 -> 11
+    ///   - listB: -1 -> 2 -> 3 -> 6
+    /// - Returns: -1 -> 1 -> 2 -> 3 -> 4 -> 6 -> 10 -> 11
+    static func mergeTwoList(listA: LinkedList<Value>, listB: LinkedList<Value>) -> LinkedList<Value> {
+        var list = LinkedList<Value>()
+        var cureentA = listA.head
+        var cureentB = listB.head
+        while var left = cureentA,
+              var right = cureentB
+        {
+            if left.value < right.value {
+                list.append(left.value)
+                cureentA = left.next
+            } else {
+                list.append(right.value)
+                cureentB = right.next
+            }
+        }
+        if let leftNodes = cureentA {
+            list.tail?.next = leftNodes
+        }
+        if let rigthNodes = cureentB {
+            list.tail?.next = rigthNodes
+        }
+        return list
+    }
+    ///Challenge 5: Remove all occurrences of a specific element
+    mutating func removeAll(_ value :Value) {
+        
+        while let head = self.head, head.value == value {
+            self.head = head.next
+        }
+        var prev = head
+        var current = head?.next
+        while let currentNode = current {
+            guard currentNode.value != value else {
+                prev?.next = currentNode.next
+                current    = prev?.next
+                continue
+            }
+            prev       = current
+            current    = current?.next
+        }
+        tail = prev
     }
 }
