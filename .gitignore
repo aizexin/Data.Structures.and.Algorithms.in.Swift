@@ -4,3 +4,4 @@ Version.m
 xcuserdata
 Podfile.lock
 *.xccheckout
+*project.xcworkspace/xcuserdata
