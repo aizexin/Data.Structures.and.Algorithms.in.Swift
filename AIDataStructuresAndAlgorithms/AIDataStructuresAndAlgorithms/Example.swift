@@ -212,4 +212,24 @@ class Example {
             print("before list: \(list)")
         }
     }
+    static func queueExample() {
+        example(of: "QueueArray") {
+            var queue = QueueArray<String>()
+            queue.enqueue("ray")
+            queue.enqueue("brian")
+            queue.enqueue("eric")
+            queue.dequeue()
+            queue.peek
+            print(queue)
+        }
+        example(of: "QueueRingBuffer") {
+            var queue = QueueRingBuffer<String>(count: 10)
+            queue.enqueue("ray")
+            queue.enqueue("brian")
+            queue.enqueue("eric")
+            queue.dequeue()
+            queue.peek
+            print(queue)
+        }
+    }
 }

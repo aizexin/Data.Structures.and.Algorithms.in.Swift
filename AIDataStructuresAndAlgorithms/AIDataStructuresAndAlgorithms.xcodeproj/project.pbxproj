@@ -11,6 +11,9 @@
 		45D635082656988B00D0C533 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D635072656988B00D0C533 /* Stack.swift */; };
 		45D6350A2657538600D0C533 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D635092657538600D0C533 /* LinkedList.swift */; };
 		45D6350C2657576600D0C533 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D6350B2657576600D0C533 /* Example.swift */; };
+		45E4564E2665D71500A82F56 /* Queues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E4564D2665D71500A82F56 /* Queues.swift */; };
+		45E456502665DBBB00A82F56 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E4564F2665DBBB00A82F56 /* DoublyLinkedList.swift */; };
+		45E456522665FD7000A82F56 /* RingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E456512665FD7000A82F56 /* RingBuffer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +34,9 @@
 		45D635072656988B00D0C533 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		45D635092657538600D0C533 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		45D6350B2657576600D0C533 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		45E4564D2665D71500A82F56 /* Queues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queues.swift; sourceTree = "<group>"; };
+		45E4564F2665DBBB00A82F56 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
+		45E456512665FD7000A82F56 /* RingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingBuffer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,9 @@
 				45D635072656988B00D0C533 /* Stack.swift */,
 				45D6350B2657576600D0C533 /* Example.swift */,
 				45D635092657538600D0C533 /* LinkedList.swift */,
+				45E4564F2665DBBB00A82F56 /* DoublyLinkedList.swift */,
+				45E4564D2665D71500A82F56 /* Queues.swift */,
+				45E456512665FD7000A82F56 /* RingBuffer.swift */,
 			);
 			path = AIDataStructuresAndAlgorithms;
 			sourceTree = "<group>";
@@ -129,8 +138,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				45D6350C2657576600D0C533 /* Example.swift in Sources */,
+				45E456502665DBBB00A82F56 /* DoublyLinkedList.swift in Sources */,
 				45D6350A2657538600D0C533 /* LinkedList.swift in Sources */,
+				45E4564E2665D71500A82F56 /* Queues.swift in Sources */,
 				45D635082656988B00D0C533 /* Stack.swift in Sources */,
+				45E456522665FD7000A82F56 /* RingBuffer.swift in Sources */,
 				45D635012656982A00D0C533 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
