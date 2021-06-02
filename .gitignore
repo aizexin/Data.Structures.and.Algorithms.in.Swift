@@ -1,7 +1,10 @@
-Pods
+# OSX
 .DS_Store
-Version.m
+
+# Xcode
 xcuserdata
-Podfile.lock
 *.xccheckout
-*project.xcworkspace/xcuserdata
+DerivedData/
+
+# CocoaPods
+Pods/
